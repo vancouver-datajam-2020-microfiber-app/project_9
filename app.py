@@ -20,10 +20,10 @@ df = pd.read_csv('Data/microfibre_loss_per_type.csv')
 fig = px.bar(df, x='textile_type', y='avg')
 
 app.layout = html.Div(children=[
-    html.H1('Hello Dash'),
+    html.H1('Microfiber Loss'),
 
     html.Div(children='''
-        Dash: A web application framework for Python.
+        Average microfiber loss per textile type.
     '''),
     dcc.Graph(
         id='example-graph',
