@@ -15,12 +15,14 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 server = app.server
 
-df = pd.read_csv('Data/microfibre_loss_per_clothing_type.csv')
+df = pd.read_csv(
+    'Data/microfibre_loss_per_clothing_type.csv').groupby(['item_type', 'lint_trap_used'], as_index=False).mean()
 
 fig = px.bar(df,
              x='item_type',
-             y='avg_microplastic_loss',
-             color='lint_trap_used')
+             y='microfibre_loss',
+             color='lint_trap_used',
+             barmode='group')
 
 app.layout = html.Div(children=[
     html.H1('Microfiber Loss'),
