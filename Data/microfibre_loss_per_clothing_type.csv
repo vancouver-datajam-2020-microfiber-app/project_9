@@ -1,4 +1,4 @@
-item_type,article_type,weight,lint_trap_used,avg_microplastic_loss,multiplier,microfibre_loss (y)
+item_type,article_type,weight,lint_trap_used,avg_microplastic_loss,multiplier,microfibre_loss
 polyester,tshirt,190,yes,161,0.13,3.9767
 polyester,shirt,162.5,yes,161,0.13,3.401125
 polyester,pants,500,yes,161,0.13,10.465
