@@ -41,7 +41,6 @@ app.layout = html.Div(children=[
         Average microfiber loss per textile type.
     '''),
 
-<<<<<<< HEAD
     html.H5('Lint Trap '
     ),
 
@@ -69,19 +68,6 @@ app.layout = html.Div(children=[
         In addition to using less energy, using the cold water cycle is better for your clothes, and reduces microfibre output up to 30% compared to a hot water wash.
 
     '''),
-=======
-    html.Img(src='./assets/img/lint_trap.png',
-             height='100px'
-             ),
-
-    html.Img(src='./assets/img/softener.png',
-             height='100px'
-             ),
-
-    html.Img(src='./assets/img/washing_machine.png',
-             height='100px'
-             ),
->>>>>>> c005591f673f13baa2e45c874c6c64673e2c1052
 ])
 
 if __name__ == '__main__':
