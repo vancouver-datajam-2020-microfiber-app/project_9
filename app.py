@@ -18,9 +18,9 @@ server = app.server
 df = pd.read_csv('Data/microfibre_loss_per_clothing_type.csv')
 
 fig = px.bar(df,
-             x='item_type',
-             y='avg_microplastic_loss',
-             color='lint_trap_used')
+    x='item_type',
+    y='avg_microplastic_loss',
+    color='lint_trap_used')
 
 app.layout = html.Div(children=[
     html.H1('Know Your Impact')
