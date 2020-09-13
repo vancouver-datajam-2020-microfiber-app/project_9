@@ -37,7 +37,19 @@ app.layout = html.Div(children=[
     ),
     html.Div(children='''
         Average microfiber loss per textile type.
-    ''')
+    '''),
+    
+    html.Img(src = './assets/img/lint_trap.png',
+        height = '100px'
+    ),
+
+    html.Img(src = './assets/img/softener.png',
+        height = '100px'
+    ),
+
+    html.Img(src = './assets/img/washing_machine.png',
+        height = '100px'
+    ),
 ])
 
 if __name__ == '__main__':
