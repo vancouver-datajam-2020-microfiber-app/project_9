@@ -15,22 +15,24 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 server = app.server
 
-df = pd.read_csv('Data/microfibre_loss_per_clothing_type.csv')
+df = pd.read_csv(
+    'Data/microfibre_loss_per_clothing_type.csv').groupby(['item_type', 'lint_trap_used'], as_index=False).mean()
 
 fig = px.bar(df,
-    x='item_type',
-    y='avg_microplastic_loss',
-    color='lint_trap_used')
+             x='item_type',
+             y='microfibre_loss',
+             color='lint_trap_used',
+             barmode='group')
 
 app.layout = html.Div(children=[
     html.H1('Know Your Impact'),
-    html.Img(src = './assets/img/datajam.jpg',
-        height = '100px'
-    ),
+    html.Img(src='./assets/img/datajam.jpg',
+             height='100px'
+             ),
     html.H1('Microfiber Loss'),
-    
+
     html.H6('Research indicates that home laundry of synthetic textiles are big contributors to microplastics in ocean which are ingested by marine plankton and move across food web. Select the options below to know how you do your laundry impacts ocean health.'),
-    
+
     dcc.Graph(
         id='microfiber-loss-textile',
         figure=fig
@@ -38,11 +40,8 @@ app.layout = html.Div(children=[
     html.Div(children='''
         Average microfiber loss per textile type.
     '''),
-    
-    html.Img(src = './assets/img/lint_trap.png',
-        height = '100px'
-    ),
 
+<<<<<<< HEAD
     html.H5('Lint Trap '
     ),
 
@@ -70,6 +69,19 @@ app.layout = html.Div(children=[
         In addition to using less energy, using the cold water cycle is better for your clothes, and reduces microfibre output up to 30% compared to a hot water wash.
 
     '''),
+=======
+    html.Img(src='./assets/img/lint_trap.png',
+             height='100px'
+             ),
+
+    html.Img(src='./assets/img/softener.png',
+             height='100px'
+             ),
+
+    html.Img(src='./assets/img/washing_machine.png',
+             height='100px'
+             ),
+>>>>>>> c005591f673f13baa2e45c874c6c64673e2c1052
 ])
 
 if __name__ == '__main__':
