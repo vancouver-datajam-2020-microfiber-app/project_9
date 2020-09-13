@@ -23,12 +23,11 @@ fig = px.bar(df,
              color='lint_trap_used')
 
 app.layout = html.Div(children=[
-    html.H1('Microfiber Loss'),
-
+    html.H1('Know Your Impact')
     html.Img(src = './assets/img/datajam.jpg',
         height = '100px'
     ),
-
+    html.H1('Microfiber Loss'),
     html.Div(children='''
         Average microfiber loss per textile type.
     '''),
