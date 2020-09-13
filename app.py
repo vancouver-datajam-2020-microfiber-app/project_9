@@ -41,6 +41,10 @@ app.layout = html.Div(children=[
         Average microfiber loss per textile type.
     '''),
 
+    html.Img(src = './assets/img/lint_trap.png',
+        height = '100px'
+    ),
+
     html.H5('Lint Trap '
     ),
 
@@ -61,9 +65,19 @@ app.layout = html.Div(children=[
     html.Img(src = './assets/img/washing_machine.png',
         height = '100px'
     ),
+    html.H5('Fabric Softener'
+    ),
+    html.Div(children='''
+        Front load washing machines reduce the wear-and-tear on your clothing. Using a front load washer results, in 7x less microfibre shedding per load compared to top-load washing machines.
+    '''),
+
+    html.Img(src = './assets/img/cold_water.png',
+        height = '100px'
+    ),
 
     html.H5('Cold Water Wash'
     ),
+
     html.Div(children='''
         In addition to using less energy, using the cold water cycle is better for your clothes, and reduces microfibre output up to 30% compared to a hot water wash.
 
