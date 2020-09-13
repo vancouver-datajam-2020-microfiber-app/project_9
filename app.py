@@ -15,9 +15,9 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 server = app.server
 
-df = pd.read_csv('Data/microfibre_loss_per_type.csv')
+df = pd.read_csv('Data/microfibre_loss_per_clothing_type.csv')
 
-fig = px.bar(df, x='textile_type', y='avg')
+fig = px.bar(df, x='item_type', y='avg_microplastic_loss')
 
 app.layout = html.Div(children=[
     html.H1('Microfiber Loss'),
@@ -26,11 +26,10 @@ app.layout = html.Div(children=[
         Average microfiber loss per textile type.
     '''),
     dcc.Graph(
-        id='example-graph',
+        id='microfiber-loss-textile',
         figure=fig
     )
 ])
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
