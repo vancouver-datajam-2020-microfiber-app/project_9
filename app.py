@@ -42,28 +42,29 @@ app.layout = html.Div(children=[
     '''),
 
     html.H5('Lint Trap '
-    ),
+            ),
 
     html.Div(children='''
         Install a lint trap on your washing machine to catch microfibres before they make it into the ocean. Lint traps can reduce microfibre out put by up to 87.
     '''),
 
-    html.Img(src = './assets/img/softener.png',
-        height = '100px'
-    ),
-    
+    html.Img(src='./assets/img/softener.png',
+             height='100px'
+             ),
+
     html.H5('Fabric Softener'
-    ),
+            ),
+
     html.Div(children='''
         Add fabric softener to your wash load to reduce microfibre shedding. Using fabric softener can prevent up to 45% of microfibres from being shed.
     '''),
 
-    html.Img(src = './assets/img/washing_machine.png',
-        height = '100px'
-    ),
+    html.Img(src='./assets/img/washing_machine.png',
+             height='100px'
+             ),
 
     html.H5('Cold Water Wash'
-    ),
+            ),
     html.Div(children='''
         In addition to using less energy, using the cold water cycle is better for your clothes, and reduces microfibre output up to 30% compared to a hot water wash.
 
