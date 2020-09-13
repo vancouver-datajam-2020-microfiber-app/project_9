@@ -23,18 +23,21 @@ fig = px.bar(df,
     color='lint_trap_used')
 
 app.layout = html.Div(children=[
-    html.H1('Know Your Impact')
+    html.H1('Know Your Impact'),
     html.Img(src = './assets/img/datajam.jpg',
         height = '100px'
     ),
     html.H1('Microfiber Loss'),
-    html.Div(children='''
-        Average microfiber loss per textile type.
-    '''),
+    
+    html.H6('Research indicates that home laundry of synthetic textiles are big contributors to microplastics in ocean which are ingested by marine plankton and move across food web. Select the options below to know how you do your laundry impacts ocean health.'),
+    
     dcc.Graph(
         id='microfiber-loss-textile',
         figure=fig
-    )
+    ),
+    html.Div(children='''
+        Average microfiber loss per textile type.
+    ''')
 ])
 
 if __name__ == '__main__':
