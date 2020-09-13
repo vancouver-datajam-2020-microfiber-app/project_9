@@ -9,7 +9,7 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['./assets/style.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
@@ -22,6 +22,10 @@ fig = px.bar(df, x='textile_type', y='avg')
 app.layout = html.Div(children=[
     html.H1('Microfiber Loss'),
 
+    html.Img(src = './assets/img/datajam.jpg',
+        height = '100px'
+    ),
+
     html.Div(children='''
         Average microfiber loss per textile type.
     '''),
@@ -30,7 +34,6 @@ app.layout = html.Div(children=[
         figure=fig
     )
 ])
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
